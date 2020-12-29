@@ -1,0 +1,2 @@
+include 'customer-service'
+rootProject.name = 'challenge'
