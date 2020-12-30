@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8089
   error:
     include-message: always
     include-binding-errors: always
@@ -8,7 +8,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8092/eureka/
-
+springdoc:
+  version: '@springdoc.version@'
 spring:
   cloud:
     gateway:
@@ -21,7 +22,13 @@ spring:
           predicates:
             - Path=/customers/**
           filters:
-            - RewritePath=/customer/(?<path>.*), /$\{path}
+            - RewritePath=/customers/(?<path>.*), /$\{path}
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/products/**
+          filters:
+            - RewritePath=/products/(?<path>.*), /$\{path}
         - id: openapi
           uri: http://localhost:${server.port}
           predicates:
