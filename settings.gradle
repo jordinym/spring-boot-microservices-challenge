@@ -1,4 +1,5 @@
 include 'customer-service'
 include 'config-service'
 include 'registry-service'
+include 'gateway-service'
 rootProject.name = 'challenge'
