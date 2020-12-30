@@ -14,4 +14,4 @@ eureka:
       defaultZone: http://localhost:8092/eureka/
 
 springdoc:
-  packagesToScan: com.jordinymontanez.challenge.customer
+  version: '@springdoc.version@'
