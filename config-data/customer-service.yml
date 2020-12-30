@@ -12,3 +12,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8092/eureka/
+
+springdoc:
+  packagesToScan: com.jordinymontanez.challenge.customer
