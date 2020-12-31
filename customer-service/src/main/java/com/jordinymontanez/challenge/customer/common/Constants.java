@@ -20,4 +20,18 @@ public final class Constants {
             return this.value;
         }
     }
+    public  enum FirebaseType {
+        ACCOUNT_SERVICE("firebase.account.service"),
+        DATABASE_URL("firebase.database.url");
+
+        String value;
+
+        FirebaseType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return this.value;
+        }
+    }
 }

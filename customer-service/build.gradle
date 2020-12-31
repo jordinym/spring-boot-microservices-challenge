@@ -34,7 +34,7 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
 	compile group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.2'
 	compile group: 'org.springdoc', name: 'springdoc-openapi-webflux-ui', version: '1.5.2'
-
+	implementation 'com.google.firebase:firebase-admin:7.0.1'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
