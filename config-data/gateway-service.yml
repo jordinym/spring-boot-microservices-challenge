@@ -23,12 +23,12 @@ spring:
             - Path=/customers/**
           filters:
             - RewritePath=/customers/(?<path>.*), /$\{path}
-        - id: product-service
-          uri: lb://product-service
+        - id: report-service
+          uri: lb://report-service
           predicates:
-            - Path=/products/**
+            - Path=/reports/**
           filters:
-            - RewritePath=/products/(?<path>.*), /$\{path}
+            - RewritePath=/reports/(?<path>.*), /$\{path}
         - id: openapi
           uri: http://localhost:${server.port}
           predicates:
