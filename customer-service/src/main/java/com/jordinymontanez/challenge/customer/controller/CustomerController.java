@@ -45,4 +45,11 @@ public class CustomerController {
                 .setPayload(customerService.createCustomer(customerDto));
     }
 
+    @GetMapping("/kpiCustomer")
+    public Response kpiCustomer() {
+        return Response
+                .ok()
+                .setPayload(customerService.kpiCustomer());
+    }
+
 }
